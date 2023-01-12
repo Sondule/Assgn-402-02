@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignmnet 402-02</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #maindiv{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin: 2rem;
+        }
+        h1{
+            color: green;
+          
+        }
+        p{
+            padding: 1rem;
+            font-size: 20px;
+            
+        }
+        button{
+            width:80px;
+            height: 30px;
+        }
+        h2{
+            color:green;
+            margin-top: 50px;
+        }
+        img{
+            width:17%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+    <h1>Geekster</h1>
+    <p><b>click on the button to add image element</b></p>
+    <button onclick="getImage()">click here</button>
+</div>
+
+
+<!-- scripting section -->
+  <script>
+    function getImage() {
+        var text=document.getElementById("maindiv")
+       var  temp=document.createElement("h2")
+       var temptext=document.createTextNode("Image element Added")
+    //    temptext.style.color="green;"
+       temp.appendChild(temptext)
+       text.appendChild(temp)
+
+       var Img=document.createElement("img")
+       Img.src="Geek.png"
+       Img.style.width="10px;"
+       text.appendChild(Img)
+    }
+    
+    </script>
+</body>
+</html>
